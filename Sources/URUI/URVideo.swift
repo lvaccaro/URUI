@@ -8,7 +8,6 @@
 import SwiftUI
 import AVFoundation
 import Combine
-import WolfBase
 
 /// A View that displays video from the camera and relays
 /// values of scanned QR codes to to the provided `URScanState`.

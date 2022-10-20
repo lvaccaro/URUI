@@ -6,7 +6,7 @@ let package = Package(
     name: "URUI",
     platforms: [
         .macOS(.v12),
-        .iOS(.v15)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -14,7 +14,7 @@ let package = Package(
             targets: ["URUI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/BlockchainCommons/URKit.git", from: "7.0.0"),
+        .package(url: "https://github.com/lvaccaro/URKit.git", branch: "bs"),
     ],
     targets: [
         .target(

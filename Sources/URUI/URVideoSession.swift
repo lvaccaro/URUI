@@ -10,6 +10,7 @@ import AVFoundation
 import Combine
 import os
 
+@available(iOS 14.0, *)
 let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "URUI")
 
 public struct URVideoSessionError: LocalizedError {
@@ -53,7 +54,9 @@ public final class URVideoSession: ObservableObject {
             captureSession.commitConfiguration()
             currentCaptureDevice = newDevice
         } catch {
-            logger.error("⛔️ \(error.localizedDescription)")
+            if #available(iOS 14.0, *) {
+                logger.error("⛔️ \(error.localizedDescription)")
+            }
         }
     }
 
@@ -98,7 +101,9 @@ public final class URVideoSession: ObservableObject {
             previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             previewLayer!.videoGravity = .resizeAspectFill
         } catch {
-            logger.error("⛔️ \(error.localizedDescription)")
+            if #available(iOS 14.0, *) {
+                logger.error("⛔️ \(error.localizedDescription)")
+            }
         }
         #endif
     }
