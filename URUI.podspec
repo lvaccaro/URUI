@@ -26,6 +26,7 @@ by Wolf McNally and Christopher Allen
   s.license          = { :type => 'BSD-2', :file => 'LICENSE.md' }
   s.author           = { 'lvaccaro' => 'me@lvaccaro.com' }
   s.source           = { :git => 'https://github.com/lvaccaro/URUI.git', :branch => 'bs' }
+  s.dependency 'URKit', :git => 'https://github.com/lvaccaro/URKit', :branch => 'bs'
 
   s.ios.deployment_target = '13.0'
 
